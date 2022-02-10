@@ -1,0 +1,101 @@
+*,
+*:before,
+*:after {
+   box-sizing: border-box;
+}
+
+#app-root {
+   max-width: 1440px;
+   padding: 40px;
+   margin: 0 auto;
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+   font-family: Arial, sans-serif;
+}
+
+.search-group,
+.radio-group__item {
+   display: flex;
+   align-items: center;
+}
+
+.search-group {
+   margin-bottom: 5px;
+}
+
+.search-group__label {
+   margin-right: 20px;
+}
+
+.search-group__select {
+   width: 150px;
+}
+
+.main-form {
+   margin: 0 auto 20px;
+}
+
+.results {
+   border: 1px solid gainsboro;
+   border-collapse: collapse;
+   border-spacing: 0;
+}
+
+th {
+   background-color: #04aa6d;
+   font-weight: 600;
+   color: #fff;
+   padding: 15px 10px;
+   border: 1px solid gainsboro;
+   line-height: 20px;
+}
+
+td {
+   padding: 30px 10px;
+   text-align: center;
+   border: 1px solid gainsboro;
+}
+
+tr {
+   transition: background-color 0.1s ease-in-out;
+}
+
+.results tbody tr:nth-child(odd) {
+   background-color: #f2f2f2;
+}
+
+.results tbody tr:nth-child(odd):hover {
+   background-color: gainsboro;
+}
+
+.results tbody tr:hover {
+   background-color: #f6f6f6;
+}
+
+.sort-button {
+   display: inline-block;
+   border: none;
+   background-color: transparent;
+   vertical-align: top;
+   padding: 0;
+   cursor: pointer;
+}
+
+.sort-button::before {
+   color: yellow;
+   font-size: 18px;
+   line-height: 20px;
+}
+
+.sort-button[data-state="up"]::before {
+   content: "\2B06";
+}
+
+.sort-button[data-state="down"]::before {
+   content: "\2B07";
+}
+
+.sort-button[data-state="up-down"]::before {
+   content: "\2B0D";
+}
